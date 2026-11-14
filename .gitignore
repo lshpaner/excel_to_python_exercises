@@ -1,38 +1,9 @@
-# data is never committed
 data/*
 !data/.gitkeep
-figures/
-
-# virtual environments, any name
-.venv/
-venv/
-env/
-.env/
-*venv*/
-.conda/
-
-# python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.ipynb_checkpoints/
-
-# excel lock files
-~$*.xlsx
-
-# WSL / Windows download metadata
-*:Zone.Identifier
-
-# editor / os
-.vscode/
-.idea/
-.DS_Store
-
-# quarto
-_site/
-/.quarto/
-**/*.quarto_ipynb
-
-# workbooks and notebooks are built (make workbooks, make notebooks) and shipped as release assets, never committed
 *.xlsx
-*.ipynb
+~$*.xlsx
+__pycache__/
+.ipynb_checkpoints/
+*venv*/
+*:Zone.Identifier
+.DS_Store
