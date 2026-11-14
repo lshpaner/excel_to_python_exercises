@@ -1,0 +1,14 @@
+pandas>=2.0
+numpy
+pyarrow
+openpyxl
+typer
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+jupyterlab
+nbconvert
+nbstripout
+ruff
+black

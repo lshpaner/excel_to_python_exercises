@@ -1,0 +1,31 @@
+name: Publish book
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.7.32
+
+      # Python cells are pre-executed locally and cached in _freeze/, so no data or kernel is needed here.
+      - name: Render
+        run: quarto render
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true
