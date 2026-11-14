@@ -19,11 +19,13 @@ notebooks/        one folder per chapter: workbook (chapters 1-3) or notebook (c
 exercises/        one folder per chapter: a worked exercise and one to do on your own
 docs/             chapter map
 core/             dataset registry and loaders
-data_gen.py       fetch raw data (typer CLI)
+data_gen.py       fetch raw data from Metro (python data_gen.py fetch --all --csv)
 preprocessing.py  cleaning and joins used from chapter 4 on
 ```
+
+Workbooks and notebooks are attached to the Releases page, one release per chapter.
 
 ## Data
 
 LA Metro Bike Share publishes anonymized trip data at https://bikeshare.metro.net/about/data/.
-`data/` is empty in this repo; `make data_gen` fills it with the quarter's trips and the station table as CSV and Parquet.
+`data/` is empty in this repo. The notebooks download what they need from the `data` release automatically; to work offline, download the two CSVs from that release into `data/raw/`.
