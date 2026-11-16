@@ -12,3 +12,4 @@ nbconvert
 nbstripout
 ruff
 black
+eda_toolkit
