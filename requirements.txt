@@ -5,6 +5,7 @@ openpyxl
 typer
 matplotlib
 seaborn
+scipy
 scikit-learn
 statsmodels
 jupyterlab
